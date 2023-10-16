@@ -17,7 +17,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
-   stable"44	
+   stable"
 
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
@@ -29,6 +29,7 @@ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://a
 sudo apt-get update
 #sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-get install -y kubelet=1.21.1-00 kubeadm=1.21.1-00 kubectl=1.21.1-00 #--allow-change-held-packages
-sudo apt-mark hold kubelet kubeadm kubectl 
+sudo apt-mark hold kubelet kubeadm kubectl
+
 
 ===================================================================================================================
